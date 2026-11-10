@@ -1,2 +1,3 @@
 tiktoken==0.14.0
+# openai     # только для exp1c_openai_count.py, нужен OPENAI_API_KEY
 # anthropic  # только для exp1b_claude_count.py, нужен ANTHROPIC_API_KEY
