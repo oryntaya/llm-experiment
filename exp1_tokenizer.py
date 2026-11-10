@@ -10,13 +10,26 @@ import tiktoken
 PHRASES = {
     "en": "Artificial intelligence is changing the way people work and learn.",
     "ru": "Искусственный интеллект меняет то, как люди работают и учатся.",
+    # русский, записанный латиницей (транслит)
+    "ru-lat": "Iskusstvennyj intellekt menyaet to, kak lyudi rabotayut i uchatsya.",
+    # казахский: кириллица (для сравнения) и латиница (алфавит 2021 г., приближённо)
+    "kk": "Жасанды интеллект адамдардың жұмыс істеу және оқу тәсілін өзгертуде.",
+    "kk-lat": "Jasandy ıntellekt adamdardyń jumys isteý jáne oqý ásilin ózgertýde.",
 }
 ENCODINGS = ["cl100k_base", "o200k_base"]
 
 
 def pieces(enc, text):
     ids = enc.encode(text)
-    return ids, [enc.decode_single_token_bytes(i).decode("utf-8", errors="replace") for i in ids]
+    return ids, [show(enc.decode_single_token_bytes(i)) for i in ids]
+
+
+def show(b):
+    """Токен может быть обрывком многобайтового символа — тогда показываем байты как \\xNN."""
+    try:
+        return b.decode("utf-8")
+    except UnicodeDecodeError:
+        return "".join(f"\\x{x:02x}" for x in b)
 
 
 def main():
@@ -44,10 +57,13 @@ def main():
     for enc_name, lang, chars, n in summary:
         lines.append(f"| {enc_name} | {lang} | {chars} | {n} | {chars / n:.2f} |")
     lines.append("")
+    lines += ["", "Во сколько раз токенов больше, чем у английской фразы:", ""]
     for enc_name in ENCODINGS:
         en = next(n for e, l, c, n in summary if e == enc_name and l == "en")
-        ru = next(n for e, l, c, n in summary if e == enc_name and l == "ru")
-        lines.append(f"- {enc_name}: RU / EN = {ru / en:.2f}x токенов")
+        ratios = ", ".join(
+            f"{l} {n / en:.2f}x" for e, l, c, n in summary if e == enc_name and l != "en"
+        )
+        lines.append(f"- {enc_name}: {ratios}")
     lines.append("")
 
     out = "\n".join(lines)
