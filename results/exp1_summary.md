@@ -45,3 +45,18 @@
 | 7 | 17 | 23 | 29 | 30 | 37 |
 
 o200k_harmony (gpt-oss) на этих текстах даёт ровно столько же токенов, что и o200k_base.
+
+## Модель -> токенайзер
+
+| модель | токенайзер | источник | токенов en / ru / kk |
+|---|---|---|---|
+| gpt-3.5-turbo | cl100k_base | tiktoken | 138 / 314 / 518 |
+| gpt-4 | cl100k_base | tiktoken | 138 / 314 / 518 |
+| gpt-4o | o200k_base | tiktoken | 136 / 181 / 210 |
+| gpt-4.1 | o200k_base | tiktoken | 136 / 181 / 210 |
+| o3 | o200k_base | tiktoken | 136 / 181 / 210 |
+| gpt-5 | o200k_base | tiktoken | 136 / 181 / 210 |
+| gpt-5.1 | o200k_base | tiktoken | 136 / 181 / 210 |
+| gpt-5.5 | o200k_base | tiktoken | 136 / 181 / 210 |
+| gpt-oss-120b | o200k_harmony | tiktoken | 136 / 181 / 210 |
+| gpt-6-astra | o200k_base | ПРЕДПОЛОЖЕНИЕ (tiktoken модель не знает, официального источника нет) | 136 / 181 / 210 |

@@ -106,6 +106,20 @@ ENCODINGS = [
 ]
 
 
+# Модель -> токенайзер. Для большинства берём таблицу tiktoken; если она модель не знает —
+# используем предположение и помечаем его как непроверенное.
+MODELS = ["gpt-3.5-turbo", "gpt-4", "gpt-4o", "gpt-4.1", "o3", "gpt-5", "gpt-5.1", "gpt-5.5", "gpt-oss-120b",
+          "gpt-6-astra"]
+ASSUMED = {"gpt-6-astra": "o200k_base"}  # tiktoken 0.14.0 модель не знает; по сторонним сайтам — o200k_base
+
+
+def model_encoding(model):
+    try:
+        return tiktoken.encoding_for_model(model).name, "tiktoken"
+    except KeyError:
+        return ASSUMED[model], "ПРЕДПОЛОЖЕНИЕ (tiktoken модель не знает, официального источника нет)"
+
+
 def show(b):
     """Токен может быть обрывком многобайтового символа — тогда показываем байты как \\xNN."""
     try:
@@ -164,6 +178,13 @@ def main():
     for i in range(len(corpus)):
         S.append(f"| {i + 1} | " + " | ".join(str(counts["o200k_base"][l][i]) for l in LANGS) + " |")
     S += ["", "o200k_harmony (gpt-oss) на этих текстах даёт ровно столько же токенов, что и o200k_base.", ""]
+    S += ["## Модель -> токенайзер", "", "| модель | токенайзер | источник | токенов en / ru / kk |", "|---|---|---|---|"]
+    for m in MODELS:
+        name, src = model_encoding(m)
+        key = "o200k_base" if name == "o200k_harmony" else name
+        c = tot[key]
+        S.append(f"| {m} | {name} | {src} | {c['en']} / {c['ru']} / {c['kk']} |")
+    S.append("")
     out = "\n".join(S)
     Path("results/exp1_summary.md").write_text(out, encoding="utf-8")
     print(out)
