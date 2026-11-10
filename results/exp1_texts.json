@@ -1,0 +1,51 @@
+[
+  {
+    "en": "Artificial intelligence is changing the way people work and learn.",
+    "ru": "Искусственный интеллект меняет то, как люди работают и учатся.",
+    "ru-lat": "Iskusstvennyj intellekt menyaet to, kak lyudi rabotayut i uchatsya.",
+    "kk": "Жасанды интеллект адамдардың жұмыс істеу және оқу тәсілін өзгертуде.",
+    "kk-lat": "Jasandy ıntellekt adamdardyń jumys isteý jáne oqý tásilin ózgertýde."
+  },
+  {
+    "en": "Good morning! How are you today? I hope you have a wonderful day.",
+    "ru": "Доброе утро! Как у вас дела сегодня? Надеюсь, у вас будет замечательный день.",
+    "ru-lat": "Dobroe utro! Kak u vas dela segodnya? Nadeyus, u vas budet zamechatelnyj den.",
+    "kk": "Қайырлы таң! Бүгін жағдайыңыз қалай? Күніңіз керемет өтеді деп үміттенемін.",
+    "kk-lat": "Qaıyrly tań! Búgin jaǵdaıyńyz qalaı? Kúnińiz keremet ótedi dep úmittenemin."
+  },
+  {
+    "en": "The city council approved a new budget for public transport, which will allow buying fifty electric buses next year.",
+    "ru": "Городской совет утвердил новый бюджет на общественный транспорт, что позволит в следующем году купить пятьдесят электробусов.",
+    "ru-lat": "Gorodskoj sovet utverdil novyj byudzhet na obshchestvennyj transport, chto pozvolit v sleduyushchem godu kupit pyatdesyat elektrobusov.",
+    "kk": "Қалалық кеңес қоғамдық көлікке арналған жаңа бюджетті бекітті, бұл келесі жылы елу электр автобусын сатып алуға мүмкіндік береді.",
+    "kk-lat": "Qalalyq keńes qoǵamdyq kólikke arnalǵan jańa bıýdjetti bekitti, bul kelesi jyly elý elektr avtobýsyn satyp alýǵa múmkindik beredi."
+  },
+  {
+    "en": "A neural network learns by adjusting its weights to reduce the error between its prediction and the correct answer.",
+    "ru": "Нейронная сеть обучается, подбирая свои веса так, чтобы уменьшить ошибку между предсказанием и правильным ответом.",
+    "ru-lat": "Nejronnaya set obuchaetsya, podbiraya svoi vesa tak, chtoby umenshit oshibku mezhdu predskazaniem i pravilnym otvetom.",
+    "kk": "Нейрондық желі болжам мен дұрыс жауап арасындағы қатені азайту үшін өз салмақтарын түзету арқылы оқиды.",
+    "kk-lat": "Neırondyq jeli boljam men durys jaýap arasyndaǵy qateni azaıtý úshin óz salmaqtaryn túzetý arqyly oqıdy."
+  },
+  {
+    "en": "Spring came early that year, and the old garden behind the house slowly filled with the smell of apple blossoms.",
+    "ru": "Весна в тот год пришла рано, и старый сад за домом медленно наполнился запахом яблоневого цвета.",
+    "ru-lat": "Vesna v tot god prishla rano, i staryj sad za domom medlenno napolnilsya zapakhom yablonevogo tsveta.",
+    "kk": "Бұл жылы көктем ерте келді, үйдің артындағы ескі бақ біртіндеп алма гүлінің иісіне толды.",
+    "kk-lat": "Bul jyly kóktem erte keldi, úıdiń artyndaǵy eski baq birtindep alma gúliniń ıisine toldy."
+  },
+  {
+    "en": "The meeting is on 15 March 2027 at 14:30, room 204; the price is 1,250 dollars.",
+    "ru": "Встреча состоится 15 марта 2027 года в 14:30 в аудитории 204; стоимость — 1250 долларов.",
+    "ru-lat": "Vstrecha sostoitsya 15 marta 2027 goda v 14:30 v auditorii 204; stoimost — 1250 dollarov.",
+    "kk": "Кездесу 2027 жылғы 15 наурызда сағат 14:30-да 204-аудиторияда өтеді; бағасы — 1250 доллар.",
+    "kk-lat": "Kezdesý 2027 jylǵy 15 naýryzda saǵat 14:30-da 204-aýdıtorııada ótedi; baǵasy — 1250 dollar."
+  },
+  {
+    "en": "Where is the nearest pharmacy? Go straight and turn left at the second traffic light.",
+    "ru": "Где ближайшая аптека? Идите прямо и поверните налево на втором светофоре.",
+    "ru-lat": "Gde blizhajshaya apteka? Idite pryamo i povernite nalevo na vtorom svetofore.",
+    "kk": "Ең жақын дәріхана қайда? Тіке жүріңіз де, екінші бағдаршамнан солға бұрылыңыз.",
+    "kk-lat": "Eń jaqyn dárihana qaıda? Tike júrińiz de, ekinshi baǵdarshamnan solǵa burylyńyz."
+  }
+]

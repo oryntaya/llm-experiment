@@ -1,1 +1,2 @@
 tiktoken==0.14.0
+# anthropic  # только для exp1b_claude_count.py, нужен ANTHROPIC_API_KEY
